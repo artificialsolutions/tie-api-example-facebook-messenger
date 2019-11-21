@@ -10,7 +10,7 @@ Facebook requires that you have a server that is available via https. We will be
 
 ### A Facebook Page
 A Facebook page with a configured "Send Message" associated to your profile is necessary to host the conversation between users and a Teneo bot. 
-Create a Page [here](https://www.facebook.com/pages/creation/). Fill in the required fields, and clic "Add a Button", select 'Contact You' and activate the 'Send Message' checkbox. On 'Step 2' clic 'Messenger' > 'Finish'.
+Create a Page [here](https://www.facebook.com/pages/creation/). Fill in the required fields, and click "Add a Button", select 'Contact You' and activate the 'Send Message' checkbox. On 'Step 2' click 'Messenger' > 'Finish'.
 
 ### Teneo Engine
 Your bot needs to be published and you need to know the engine url.
