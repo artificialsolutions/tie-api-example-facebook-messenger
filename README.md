@@ -8,6 +8,10 @@ You can find the source code of this connector on [Github](https://github.com/ar
 ### Server that is available via https
 Facebook requires that you have a server that is available via https. We will be using [Heroku](https://www.heroku.com/) as an example here. 
 
+### A Facebook Page
+A Facebook page with a configured "Send Message" associated to your profile is necessary to host the conversation between users and a Teneo bot. 
+Create a Page [here](https://www.facebook.com/pages/creation/). Fill in the required fields, and clic "Add a Button", select 'Contact You' and activate the 'Send Message' checkbox. On 'Step 2' clic 'Messenger' > 'Finish'.
+
 ### Teneo Engine
 Your bot needs to be published and you need to know the engine url.
 
@@ -20,9 +24,12 @@ After you have created the app, a new page appears called 'Add a Product'. On th
 You have now added Messenger as a product to your Facebook app. Next you need to get a page token.
 
 ### Generate a Facebook Page Token
-Facebook Messenger bots need to be connected to businesses and those businesses need to be present on Facebook with a Facebook Page. For your bot to be able to respond to questions that are sent to your business Facebook page (via Facebook Messenger) you need to generate a page token. Scroll down to the section that say 'Token Generation'. You can either select an existing Facebook Page or create a new Facebook. After you have selected the page, the token will appear. Copy this token and remember it for use later.
+Facebook Messenger bots need to be connected to businesses and those businesses need to be present on Facebook with a Facebook Page. For your bot to be able to respond to questions that are sent to your business Facebook page (via Facebook Messenger) you need to generate a page token. Scroll down to the section that say 'Access Tokens'. 
+You can either select an existing Facebook Page or create a new Facebook (see prerequisites). Then, Activate 'Manage and Access Page conversations in Messenger'. 
 
-Make sure you copy and store the page token, because this is the only time it will be visible.
+After you have selected the page, generate a token. Make sure you copy and store the page token in a safe place, because this is the only time it will be visible.
+
+At this point, it is not necessary to submit any aspect of the facebook app for review, The “in Development Status” is enough to test it with Teneo bot.
 
 ### Deploy the connector to Heroku
 Click the button below to create a new Heroku app that contains the connector:
