@@ -22,17 +22,17 @@ After you have created the app, a new page appears called 'Add a Product'. On th
 You have now added Messenger as a product to your Facebook app. Next you need to get a page token.
 
 ### Generate a Facebook Page Token
-Facebook Messenger bots need to be connected to businesses and those businesses need to be present on Facebook with a Facebook Page. For your bot to be able to respond to questions that are sent to your business Facebook page (via Facebook Messenger) you need to generate a page token. Scroll down to the section that say 'Access Tokens'. 
+Facebook Messenger bots need to be connected to businesses and those businesses need to be present on Facebook with a Facebook Page. For your bot to be able to respond to questions that are sent to your business Facebook page (via Facebook Messenger) you need to generate a page token. Scroll down to the section that says 'Access Tokens'. 
 You can either select an existing Facebook Page or create a new Facebook (see prerequisites). Then, Activate 'Manage and Access Page conversations in Messenger'. 
 
 After you have selected the page, generate a token. Make sure you copy and store the page token in a safe place, because this is the only time it will be visible.
 
-At this point, it is not necessary to submit any aspect of the facebook app for review, The “in Development Status” is enough to test it with Teneo bot.
+At this point, it is not necessary to submit any aspect of the facebook app for review, The 'in development' statuss is enough to test your Teneo bot.
 
 ### Deploy the connector to Heroku
 Click the button below to create a new Heroku app that contains the connector:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg?classes=noborder)](https://heroku.com/deploy?template=https://github.com/artificialsolutions/tie-api-example-facebook-messenger)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/artificialsolutions/tie-api-example-facebook-messenger)
 
 1. Give the app a name (lowercase, no spaces)
 2. In the 'Config Vars' section, add the following:
