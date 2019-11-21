@@ -2,8 +2,6 @@
 
 With the Facebook Messenger connector, you can make your Teneo bot available on Facebook Messenger. This guide will take you through the steps of installing the connector (we will be using Heroku to host it) and connecting it to a business page on Facebook.
 
-You can find the source code of this connector on [Github](https://github.com/artificialsolutions/tie-api-example-facebook-messenger).
-
 ## Prerequisites
 ### Server that is available via https
 Facebook requires that you have a server that is available via https. We will be using [Heroku](https://www.heroku.com/) as an example here. 
