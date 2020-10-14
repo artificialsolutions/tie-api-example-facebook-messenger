@@ -8,15 +8,20 @@ Facebook requires that you have a server that is available via https. We will be
 
 ### A Facebook Page
 A Facebook page with a configured "Send Message" associated to your profile is necessary to host the conversation between users and a Teneo bot. 
-Create a Page [here](https://www.facebook.com/pages/creation/). Fill in the required fields, and click "Add a Button", select 'Contact You' and activate the 'Send Message' checkbox. In 'Step 2' click 'Messenger' > 'Finish'.
+
+Create a Page [here](https://www.facebook.com/pages/creation/). 
+* In 'Page Information', fill the required fields: Page name and Category, and clock Save.
+* Next, click '+Add a Button' and select 'Send a Message'.
+* Click the 'View as User'.
 
 ### Teneo Engine
 Your bot needs to be published and you need to know the engine url.
 
 ## Setup instructions
 ### Create a new Faceboook app
-Login to [developers.facebook.com](https://developers.facebook.com/apps/) and create a new app. 
+Login to [developers.facebook.com](https://developers.facebook.com/apps/) and create a new app, select 'Manage Business Integrations', and click 'Continue'.
 
+Fill in 'App Display Name' and 'Contact Email', leave the default values on the remaining fields, and click 'Create App'.
 After you have created the app, a new page appears called 'Add a Product'. On that page find the tile that says 'Messenger' and click the 'Set Up' button.
 
 You have now added Messenger as a product to your Facebook app. Next you need to get a page token.
@@ -27,7 +32,7 @@ You can either select an existing Facebook Page or create a new Facebook (see pr
 
 After you have selected the page, generate a token. Make sure you copy and store the page token in a safe place, because this is the only time it will be visible.
 
-At this point, it is not necessary to submit any aspect of the facebook app for review, The 'in development' statuss is enough to test your Teneo bot.
+At this point, it is not necessary to submit any aspect of the facebook app for review, The 'in development' status is enough to test your Teneo bot.
 
 ### Deploy the connector to Heroku
 Click the button below to create a new Heroku app that contains the connector:
@@ -44,23 +49,17 @@ Click the button below to create a new Heroku app that contains the connector:
 After the app has been deployed, choose 'Open app'. This will open a browser window (it will say show an error page 'Cannot GET /', but you can ignore that). Copy the url of the page and remember it, you will need to enter it later when you finish the Facebook configuration.
 
 ### Setup webhook on Facebook
-Next we will need to setup the webhook. Scroll to the 'Webhooks' section and click on the 'Setup Webhooks' button. A window appears in which you need to provide a 'Callback URL' and a 'Verify Token'.
+Next we will need to setup the webhook. Make sure your bot is already running in Heroku, or locally.
+Scroll to the 'Webhooks' section and click on the 'Setup Webhooks' button. A window appears in which you need to provide a 'Callback URL' and a 'Verify Token'.
 
-* In the 'Callback URL' field paste your Heroku server url appended with `/webhook/`. It should look something like this: https://yourappname.herokuapp.com/webhook/
+* In the 'Callback URL' field paste your Heroku server url appended with `/webhook/`. It should look something like this: https://yourappname.herokuapp.com/webhook/ or https://abc123.ngrok.io/webhook/ for local deployments.
 * In the 'Verify Token' field, enter the verify token you declared when your started the Heroku app.
-* For Subscription Fields select: `messages` and `messaging_postbacks`
-* Select the page you want your webhook for
+* On the newly created Page, click the blue 'Add Subscriptions' button, and select: `messages` and `messaging_postbacks`.
 
-Click 'Verify and Save'. If verification was successful, your bot is now available via Facebook Messenger.
 
 ## Test your bot
-To test your bot, go to your Facebook page and add a button:
-1. Click 'Add a button'
-2. You will be presented by five different categories of buttons, choose the one that says 'Contact us'
-3. Select 'Send message' and press next
-4. Facebook will now ask you what should happen when they press the button, choose 'Messenger'
-
-That's it! To test it, hover over the 'Send message' button and choose 'Test button'. A messenger windows appear, allowing you chat with your bot.
+To test your bot, go back to your Facebook page, click on "View as Visitor".
+That's it! To test it, clic 'Send message', a messenger windows appear, allowing you chat with your bot.
 
 
 ## Sending attachments
