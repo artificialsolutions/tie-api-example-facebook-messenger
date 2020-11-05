@@ -59,7 +59,7 @@ Scroll to the 'Webhooks' section and click on the 'Setup Webhooks' button. A win
 
 ## Test your bot
 To test your bot, go back to your Facebook page, click on "View as Visitor".
-That's it! To test it, clic 'Send message', a messenger windows appear, allowing you chat with your bot.
+That's it! To test it, click 'Send message', a messenger windows appear, allowing you chat with your bot.
 
 
 ## Sending attachments
